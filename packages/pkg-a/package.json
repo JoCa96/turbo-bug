@@ -2,6 +2,8 @@
   "name": "pkg-a",
   "scripts": {
     "dev": "turbo watch --filter=pkg-a dev:run",
+    "dev2": "turbo --no-daemon watch --filter=pkg-a dev:run",
+    "dev3": "TURBO_DAEMON=0 && turbo --no-daemon watch --filter=pkg-a dev:run",
     "dev:run": "serve ./wwww",
     "build": "echo \"Building at the speed of Turbo.\" > output-file.txt && cat output-file.txt",
     "lint": "echo \"Linted!\"",
